@@ -44,7 +44,7 @@ const RatedMovie = () => {
         try {
             const response = await baseImage()
             const beautyResponse = JSON.stringify(response, null, 2);
-            setUrlImage(response.base_url + response.backdrop_sizes[1])
+            setUrlImage(response.secure_base_url + response.backdrop_sizes[1])
 
         } catch (error) {
             showErrorAlert(error.message);
